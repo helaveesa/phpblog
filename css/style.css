@@ -47,7 +47,24 @@ a:hover {
 .left {
 	width:780px;
 	padding:10px;
-	float:left;	
+	float:left;		
+}
+
+.left h1 {
+	color:#63C;	
+	font-variant: small-caps;
+}
+
+.left p {
+	color:#333;
+	text-indent: 30px;
+	text-align: justify;
+	letter-spacing: 1px;	
+}
+
+.left img {
+	float:right;
+	margin-right:20px;	
 }
 
 .article {

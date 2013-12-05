@@ -33,9 +33,10 @@
 							<div>
 								<h1>%s</h1>
 								<p>%s</p>
+								<img src="img/%s" alt="teddy"/>
 							</div>
 						
-						', $data['title'], $data['desc']);
+						', $data['title'], $data['desc'], $data['image']);
 					}
 					while ($data = mysql_fetch_array($result));
 				?>
@@ -44,7 +45,7 @@
             <div class="right">
             
                 <div class="right_menu">
-                <a href="#">Главная</a>
+                <a href="#">На главную</a>
                 <a href="#">Статьи</a>
                 <a href="#">Видео</a>
                 <a href="#">Фотографии</a>
