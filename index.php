@@ -26,12 +26,12 @@
 					do {
 						printf('
 						<div class="article">
-							<img src="img/girl.jpg" />
+							<img src="img/girl2.jpg" /> 
 							<a class="title" href="#"><h3>%s</h3></a>
 							<p>%s <a href="view.php?id=%s">показать полностью>>> </a></p>
 							<div style="clear:both;"></div>
 						</div>
-						',$data["title"],$data["m_desc"], $data["id"]);
+						',$data["title"],$data["m_desc"], $data["id"], $data["images"]);
 					}
 					while ($data = mysql_fetch_array($result));
 				?>
@@ -41,11 +41,11 @@
             
                 <div class="right_menu">
                 <a href="#">Главная</a>
-                <a href="#">Статьи</a>
-                <a href="#">Видео</a>
-                <a href="#">Фотографии</a>
-                <a href="#">Архив</a>
-                <a href="#">Обратная связь</a>
+                <a href="allart.php">Статьи</a>
+                <a href="video.php">Видео</a>
+                <a href="gallery.php">Фотографии</a>
+                <a href="arh.php">Архив</a>
+                <a href="contacts.php">Обратная связь</a>
                 </div>
                 
             </div>

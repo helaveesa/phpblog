@@ -55,6 +55,11 @@ a:hover {
 	font-variant: small-caps;
 }
 
+.left h2 {
+	color:#909;
+	font-variant:normal;	
+}
+
 .left p {
 	color:#333;
 	text-indent: 30px;
@@ -65,6 +70,44 @@ a:hover {
 .left img {
 	float:right;
 	margin-right:20px;	
+}
+
+
+.frame-block {
+	position: relative;
+	display: block;
+	height:335px;
+	width: 575px;
+}
+
+.frame-block span {
+	background: url(frame.png) no-repeat center top;
+	height:335px;
+	width: 575px;
+	display: block;
+	position: absolute;
+}
+
+
+.img-desc {
+	position: relative;
+	display: block;
+	height:335px;
+	width: 575px;
+
+}
+
+.img-desc cite {
+	background: #111;
+	filter:alpha(opacity=55);
+	opacity:.55;
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 555px;
+	padding: 10px;
+	border-top: 1px solid #999;
 }
 
 .article {

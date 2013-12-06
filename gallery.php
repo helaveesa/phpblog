@@ -20,25 +20,28 @@
         <div class="content">
         
             <div class="left">
+            	<h2>ФОТОГАЛЕРЯ</h2><br>
                 <?php
-				if(!isset($_GET["id"])) {
-					$id = 1;	
-				} else {
-					$id = $_GET["id"];	
-				}
-					$result = mysql_query("SELECT * FROM data WHERE id='$id'") or die(mysql_error());
-					$data = mysql_fetch_array($result);
+					$result = mysql_query("SELECT * FROM gallery") or die(mysql_error());
+					$gallery = mysql_fetch_array($result);
 					do {
 						printf('
-							<div>
-								<h1>%s</h1>
-								<p>%s</p>
-								<img src="img/%s" alt="teddy"/>
+						<div class="gallery">
+							
+							<div class="frame-block">
+								<span>&nbsp;</span>
+								<img src="gallery/%s" />
 							</div>
+							<div class="img-desc">
+								<img src="gallery/%s" />
+								<cite>Подпись к изображению</cite>
+							</div>
+							
+						</div>
 						
-						', $data['title'], $data['desc'], $data['image']);
+						',$gallery['max_photos'], $gallery['min_photos']);
 					}
-					while ($data = mysql_fetch_array($result));
+					while ($gallery = mysql_fetch_array($result));
 				?>
             </div>
         

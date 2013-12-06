@@ -20,23 +20,19 @@
         <div class="content">
         
             <div class="left">
+            	<h2>СПИСОК ВСЕХ СТАТЕЙ:</h2><br>
+                <img src="imgart/1.png" />
                 <?php
-				if(!isset($_GET["id"])) {
-					$id = 1;	
-				} else {
-					$id = $_GET["id"];	
-				}
-					$result = mysql_query("SELECT * FROM data WHERE id='$id'") or die(mysql_error());
+					$result = mysql_query("SELECT * FROM data") or die(mysql_error());
 					$data = mysql_fetch_array($result);
 					do {
 						printf('
 							<div>
-								<h1>%s</h1>
-								<p>%s</p>
-								<img src="img/%s" alt="teddy"/>
+								<h3>%s</h3>
+								<p>%s</p><br>
 							</div>
 						
-						', $data['title'], $data['desc'], $data['image']);
+						',$data['title'], $data['aforizm']);
 					}
 					while ($data = mysql_fetch_array($result));
 				?>
